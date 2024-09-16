@@ -2,14 +2,43 @@ package JualKaset;
 //Ini Adalah SubClass
 public class CD2 extends Product {
     private String artist;
-    private int totalSong;
+    private static int totalSong;
     private String label;
 
+    public String getArtist() {
+        return this.artist;
+    }
+
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
+
+    public int getTotalSong() {
+        return CD2.totalSong;
+    }
+
+    public void setTotalSong(int totalSong) {
+        CD2.totalSong = totalSong;
+    }
+
+    public String getLabel() {
+        return this.label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    public CD2(int number, String name, int quantity, double price) {
+        super(number, name, quantity, price);
+        this.number = number;
+        this.name = name;
+        this.quantity = quantity;
+        this.price = price;
+    }
+
     public CD2() {
-        number = 2;
-        name = "Makanlah Tahiku Yang Sedap Ini";
-        quantity = 100;
-        price = 100000.0;
+        super(1, "EEk BAkar", 1, 2000000.0);
         artist = "Galang Rehan";
         totalSong = 10;
         label = "ShutUp Music Production";
@@ -17,10 +46,7 @@ public class CD2 extends Product {
 
 
     public void printCD2() {
-        System.out.println("CD Nomer: "+number);
-        System.out.println("Album: "+ name);
-        System.out.println("Jumlah Kaset: "+quantity);
-        System.out.println("Harga: "+price);
+        super.print();
         System.out.println("Artist: "+artist);
         System.out.println("Total Lagu: "+totalSong);
         System.out.println("Label: "+label);

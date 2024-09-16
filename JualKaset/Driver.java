@@ -27,7 +27,7 @@ public class Driver {
             } else {
                 System.out.println("Mohon Maaf, Mungkin Nomer CD Yang Anda Maksud Belum Tersedia");
             }
-        } else if (namaPrint.equalsIgnoreCase("DVD")) {
+        } else if (namaPrint.equals("DVD")) {
             System.out.print("DVD 1-2: ");
             noDVD = p.nextInt();
             if (noDVD == 1) {
